@@ -1,0 +1,47 @@
+Part-1
+    a. For background removal of images, I created a deep learning pre-trained model using DeepLabV3 on Pytorch library. This will remove
+        the background of images which contain atleast one person. (Try to use images contain human beings).
+        
+        Pre-requisites:
+        ! pip install opencv-python
+        ! pip install torchvision --user
+     
+    b. Created a web service using flask which will locally deploy this model.
+        Both removeBg.py and img_seg_torch.ipynb files will act as flask apis
+        
+        If the image is in remote location
+             
+             use: http://127.0.0.1:5000/remove_img_background API for testing, along with request, pass online image-url as url 
+             
+             Send url as json format as below:
+             {
+               "url": "https://pbs.twimg.com/profile_images/691700243809718272/z7XZUARB_400x400.jpg"
+             }
+        
+        If the image is in local path 
+             use: http://127.0.0.1:5000/rm_img_bg_local  API for testing, along with request pass local path as image_path as data
+             Send image_path as json format as below:
+             {
+                "image_path": "C:/Users/sajana/Projects/gotPhoto/archive/people_segmentation/images/aroni-arsa-children-little.jpg"
+             }
+                
+    c. When I try to deploy this to AWS using Lambda, the free tier storage has some limit which is not allowing to upload the packaged model
+        so, I just created a simple aws lambda function which will return some message upon calling from aws APIs for demonstartion purpose.
+        
+        use below aws api for testing aws lambda.
+        
+        https://f9mowhm3zk.execute-api.eu-north-1.amazonaws.com/v1/url   
+        
+        This will return a message "This is a Web Service for Background Removal."
+        
+        
+Part-2
+    
+    Created a churn prediction classification model using below models.
+    1. Artificial Nueral Network
+    2. Random Forest
+    3. XGBoost
+    
+    "is_churn" -> This is the target variable being predicted using the above model
+    If predicted label is 0 -> No churn
+    If predicted label is 1 -> Churn
