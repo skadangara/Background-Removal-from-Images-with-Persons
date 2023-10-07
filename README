@@ -33,15 +33,3 @@ Part-1
         https://f9mowhm3zk.execute-api.eu-north-1.amazonaws.com/v1/url   
         
         This will return a message "This is a Web Service for Background Removal."
-        
-        
-Part-2
-    
-    Created a churn prediction classification model using below models.
-    1. Artificial Nueral Network
-    2. Random Forest
-    3. XGBoost
-    
-    "is_churn" -> This is the target variable being predicted using the above model
-    If predicted label is 0 -> No churn
-    If predicted label is 1 -> Churn
