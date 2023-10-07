@@ -22,5 +22,5 @@ Please find the below details for executing the code.
              use: http://127.0.0.1:5000/rm_img_bg_local  API for testing, along with request pass local path as image_path as data
              Send image_path as json format as below:
              {
-                "image_path": "C:/Users/sajana/Projects/gotPhoto/archive/people_segmentation/images/aroni-arsa-children-little.jpg"
+                "image_path": "C:/Users/sajana/Projects/images/aroni-arsa-children-little.jpg"
              }
