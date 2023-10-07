@@ -1,4 +1,4 @@
-Part-1
+Please find the below details for executing the code.
     a. For background removal of images, I created a deep learning pre-trained model using DeepLabV3 on Pytorch library. This will remove
         the background of images which contain atleast one person. (Try to use images contain human beings).
         
@@ -24,12 +24,3 @@ Part-1
              {
                 "image_path": "C:/Users/sajana/Projects/gotPhoto/archive/people_segmentation/images/aroni-arsa-children-little.jpg"
              }
-                
-    c. When I try to deploy this to AWS using Lambda, the free tier storage has some limit which is not allowing to upload the packaged model
-        so, I just created a simple aws lambda function which will return some message upon calling from aws APIs for demonstartion purpose.
-        
-        use below aws api for testing aws lambda.
-        
-        https://f9mowhm3zk.execute-api.eu-north-1.amazonaws.com/v1/url   
-        
-        This will return a message "This is a Web Service for Background Removal."
